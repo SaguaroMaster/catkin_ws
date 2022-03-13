@@ -14,7 +14,8 @@ TebLocalPlannerROS:
     
  # Robot
 
- #wheelbase: 0.29
+ wheelbase: 0.29
+ cmd_angle_instead: True
  max_vel_x: 0.4
  max_vel_x_backwards: 0.2
  max_vel_theta: 0.4

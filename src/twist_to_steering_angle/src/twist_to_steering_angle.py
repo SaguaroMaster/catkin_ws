@@ -22,14 +22,16 @@ def callback1(data):
     angular_speed = data.angular.z
 
     wheelbase = 0.28
-    steer_us = 1455
+    #steer_us = 1455
 
-    if angular_speed != 0 and target_speed != 0:
+    '''if angular_speed != 0 and target_speed != 0:
         radius = target_speed / angular_speed
         steer_deg = math.degrees(math.atan(wheelbase / radius))
         steer_us = steer_deg * 16.12 + 1455
     else:
-        steer_us = 1455
+        steer_us = 1455'''
+    steer_deg=angular_speed
+    steer_us = steer_deg * 16.12 + 1455
 
     sender(steer_us, target_speed)
 
