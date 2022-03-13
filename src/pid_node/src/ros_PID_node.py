@@ -8,8 +8,8 @@ from simple_pid import PID
 
 from time import sleep
 
-Kp = 80
-Ki = 60
+Kp = 100
+Ki = 80
 Kd = 0.0
 
 pid = PID(Kp, Ki, Kd)
@@ -43,7 +43,7 @@ def callback1(data):
     pid.setpoint = target_speed
 
     if (target_speed != 0):
-        Kf = 250
+        Kf = 400
         if (pid.auto_mode != True):
             pid.auto_mode = True
         pid_output = pid(speed) + (target_speed * abs(Kf))
