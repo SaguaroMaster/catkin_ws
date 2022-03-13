@@ -7,9 +7,9 @@
 #transform_tolerance: 0.2
 
 #Obstacle marking parameters
-obstacle_range: 1.0
+obstacle_range: 3.0
 max_obstacle_height: 3.0
-raytrace_range: 3.0
+raytrace_range: 3.5
 
 #The footprint of the robot 
 footprint: [ [0.2, -0.15], [-0.2, -0.15], [-0.2, 0.15], [0.2, 0.15] ]
@@ -17,7 +17,7 @@ footprint: [ [0.2, -0.15], [-0.2, -0.15], [-0.2, 0.15], [0.2, 0.15] ]
 
 #Cost function parameters
 inflation:
-  inflation_radius: 0.25
+  inflation_radius: 0.2
   cost_scaling_factor: 10.0
 
 #The cost at which a cell is considered an obstacle when a map is read from the map_server
