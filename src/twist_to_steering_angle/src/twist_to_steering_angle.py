@@ -30,7 +30,7 @@ def callback1(data):
         steer_us = steer_deg * 16.12 + 1455
     else:
         steer_us = 1455'''
-    steer_deg=angular_speed
+    steer_deg=angular_speed*57.3
     steer_us = steer_deg * 16.12 + 1455
 
     sender(steer_us, target_speed)
