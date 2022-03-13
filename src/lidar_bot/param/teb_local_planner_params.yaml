@@ -14,7 +14,7 @@ TebLocalPlannerROS:
     
  # Robot
 
- wheelbase: 0.29
+ #wheelbase: 0.29
  max_vel_x: 0.5
  max_vel_x_backwards: 0.2
  max_vel_theta: 0.5
@@ -84,4 +84,4 @@ TebLocalPlannerROS:
 
 #Recovery
 
-oscillation_recovery: False
+#oscillation_recovery: False
