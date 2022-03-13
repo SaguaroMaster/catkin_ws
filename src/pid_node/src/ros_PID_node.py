@@ -43,7 +43,7 @@ def callback1(data):
     pid.setpoint = target_speed
 
     if (target_speed != 0):
-        Kf = 180
+        Kf = 250
         if (pid.auto_mode != True):
             pid.auto_mode = True
         pid_output = pid(speed) + (target_speed * abs(Kf))
