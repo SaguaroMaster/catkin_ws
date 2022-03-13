@@ -6,8 +6,6 @@ from std_msgs.msg import Float64
 from std_msgs.msg import Float64MultiArray
 from simple_pid import PID
 
-from time import sleep
-
 Kp = 100
 Ki = 80
 Kd = 0.0
@@ -43,7 +41,7 @@ def callback1(data):
     pid.setpoint = target_speed
 
     if (target_speed != 0):
-        Kf = 400
+        Kf = 300
         if (pid.auto_mode != True):
             pid.auto_mode = True
         pid_output = pid(speed) + (target_speed * abs(Kf))
