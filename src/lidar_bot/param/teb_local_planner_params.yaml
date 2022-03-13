@@ -13,13 +13,14 @@ TebLocalPlannerROS:
  feasibility_check_no_poses: 5
     
  # Robot
-         
+
+ wheelbase: 0.29
  max_vel_x: 0.5
  max_vel_x_backwards: 0.2
  max_vel_theta: 0.5
  acc_lim_x: 0.2
  acc_lim_theta: 0.2
- min_turning_radius: 1.7
+ min_turning_radius: 1.8
  footprint_model: # types: "point", "circular", "two_circles", "line", "polygon"
    type: "polygon"
    #radius: 0.2 # for type "circular"
@@ -40,6 +41,7 @@ TebLocalPlannerROS:
  # Obstacles
     
  min_obstacle_dist: 0.2
+ inflation_dist: 0.2 
  include_costmap_obstacles: True
  costmap_obstacles_behind_robot_dist: 0.2
  obstacle_poses_affected: 30
@@ -79,3 +81,7 @@ TebLocalPlannerROS:
  obstacle_keypoint_offset: 0.1
  obstacle_heading_threshold: 0.45
  visualize_hc_graph: False
+
+#Recovery
+
+oscillation_recovery: False
