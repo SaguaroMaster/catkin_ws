@@ -1,0 +1,14 @@
+<launch>
+
+    <node pkg="rosserial_python" type="serial_node.py" args="/dev/ttyACM0" name="serial_node" respawn="true"/>
+    <node pkg="pid_node" type="ros_PID_node.py" name="pid_node" respawn="true"/>
+    <node pkg="robotics_project" type="odometry_node" name="odometry_node" respawn="true"/>
+
+    <include file="$(find ydlidar)/launch/lidar.launch" />
+
+    <node pkg="tf" type="static_transform_publisher" name="footprint_to_base_broadcaster" args="0.0 0.0 0.25 0 0 0 base_footprint base_link 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="0.12 0.01 -0.25 0 0 0 base_link laser 100"/>
+
+    <node pkg="gmapping" type="slam_gmapping" name="mappingg"/>
+
+</launch>
