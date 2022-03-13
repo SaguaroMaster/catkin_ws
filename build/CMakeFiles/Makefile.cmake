@@ -22,8 +22,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "pid_node/catkin_generated/package.cmake"
   "twist_to_steering_angle/catkin_generated/ordered_paths.cmake"
   "twist_to_steering_angle/catkin_generated/package.cmake"
-  "ydlidar/catkin_generated/ordered_paths.cmake"
-  "ydlidar/catkin_generated/package.cmake"
   "/home/saguaro/catkin_ws/devel/share/robotics_project/cmake/robotics_project-msg-paths.cmake"
   "/home/saguaro/catkin_ws/src/CMakeLists.txt"
   "/home/saguaro/catkin_ws/src/ROS-odometry-master/CMakeLists.txt"
@@ -32,8 +30,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/saguaro/catkin_ws/src/pid_node/package.xml"
   "/home/saguaro/catkin_ws/src/twist_to_steering_angle/CMakeLists.txt"
   "/home/saguaro/catkin_ws/src/twist_to_steering_angle/package.xml"
-  "/home/saguaro/catkin_ws/src/ydlidar/CMakeLists.txt"
-  "/home/saguaro/catkin_ws/src/ydlidar/package.xml"
   "/opt/ros/melodic/share/actionlib/cmake/actionlib-msg-extras.cmake"
   "/opt/ros/melodic/share/actionlib/cmake/actionlibConfig-version.cmake"
   "/opt/ros/melodic/share/actionlib/cmake/actionlibConfig.cmake"
@@ -260,7 +256,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "pid_node/CMakeFiles/CMakeDirectoryInformation.cmake"
   "ROS-odometry-master/CMakeFiles/CMakeDirectoryInformation.cmake"
   "twist_to_steering_angle/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "ydlidar/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -345,6 +340,4 @@ set(CMAKE_DEPEND_INFO_FILES
   "ROS-odometry-master/CMakeFiles/robotics_project_generate_messages_py.dir/DependInfo.cmake"
   "ROS-odometry-master/CMakeFiles/tf_generate_messages_py.dir/DependInfo.cmake"
   "ROS-odometry-master/CMakeFiles/sensor_msgs_generate_messages_py.dir/DependInfo.cmake"
-  "ydlidar/CMakeFiles/ydlidar_client.dir/DependInfo.cmake"
-  "ydlidar/CMakeFiles/ydlidar_node.dir/DependInfo.cmake"
   )

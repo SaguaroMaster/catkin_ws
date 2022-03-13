@@ -134,7 +134,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/saguaro/catkin_ws/build/pid_node/cmake_install.cmake")
   include("/home/saguaro/catkin_ws/build/ROS-odometry-master/cmake_install.cmake")
   include("/home/saguaro/catkin_ws/build/twist_to_steering_angle/cmake_install.cmake")
-  include("/home/saguaro/catkin_ws/build/ydlidar/cmake_install.cmake")
 
 endif()
 

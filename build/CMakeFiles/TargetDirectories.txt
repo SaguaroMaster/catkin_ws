@@ -127,12 +127,3 @@
 /home/saguaro/catkin_ws/build/twist_to_steering_angle/CMakeFiles/install/local.dir
 /home/saguaro/catkin_ws/build/twist_to_steering_angle/CMakeFiles/rebuild_cache.dir
 /home/saguaro/catkin_ws/build/twist_to_steering_angle/CMakeFiles/install.dir
-/home/saguaro/catkin_ws/build/ydlidar/CMakeFiles/install/strip.dir
-/home/saguaro/catkin_ws/build/ydlidar/CMakeFiles/install.dir
-/home/saguaro/catkin_ws/build/ydlidar/CMakeFiles/ydlidar_client.dir
-/home/saguaro/catkin_ws/build/ydlidar/CMakeFiles/ydlidar_node.dir
-/home/saguaro/catkin_ws/build/ydlidar/CMakeFiles/install/local.dir
-/home/saguaro/catkin_ws/build/ydlidar/CMakeFiles/test.dir
-/home/saguaro/catkin_ws/build/ydlidar/CMakeFiles/list_install_components.dir
-/home/saguaro/catkin_ws/build/ydlidar/CMakeFiles/edit_cache.dir
-/home/saguaro/catkin_ws/build/ydlidar/CMakeFiles/rebuild_cache.dir

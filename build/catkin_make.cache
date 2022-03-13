@@ -1,2 +1,2 @@
-ROS-odometry-master:pid_node:twist_to_steering_angle:ydlidar
+ROS-odometry-master:pid_node:twist_to_steering_angle
 -DCATKIN_DEVEL_PREFIX=/home/saguaro/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/saguaro/catkin_ws/install -G Unix Makefiles
