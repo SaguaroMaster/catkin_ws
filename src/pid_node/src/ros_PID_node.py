@@ -8,8 +8,8 @@ from simple_pid import PID
 
 from time import sleep
 
-Kp = 80
-Ki = 60
+Kp = 70
+Ki = 50
 Kd = 0.0
 
 pid = PID(Kp, Ki, Kd)
