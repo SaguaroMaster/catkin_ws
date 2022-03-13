@@ -1,0 +1,8 @@
+prefix=/home/saguaro/catkin_ws/install
+
+Name: robotics_project
+Description: Description of robotics_project
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime message_filters

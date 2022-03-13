@@ -1,0 +1,9 @@
+\subsubsection usage Usage
+\verbatim
+<node name="odometry_node" pkg="robotics_project" type="odometry_node">
+  <param name="x" type="int" value="0" />
+  <param name="y" type="int" value="0" />
+  <param name="mode" type="int" value="0" />
+</node>
+\endverbatim
+

@@ -1,0 +1,8 @@
+prefix=/home/saguaro/catkin_ws/devel
+
+Name: pid_node
+Description: Description of pid_node
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

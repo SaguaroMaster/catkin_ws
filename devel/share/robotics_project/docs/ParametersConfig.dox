@@ -1,0 +1,8 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~x" : \b [int] Set the x value min: 0, default: 0, max: 100
+- \b "~y" : \b [int] Set the y value min: 0, default: 0, max: 100
+- \b "~mode" : \b [int] Choose between Ackerman and differetial mode min: 0, default: 0, max: 1
+
