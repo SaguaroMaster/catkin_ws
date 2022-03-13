@@ -17,12 +17,14 @@
     <node pkg="amcl" type="amcl" name="amcl"/>
 
     <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-       <!-- <rosparam file="$(find lidar_bot)/param/teb_local_planner_params.yaml" command="load" />
+        <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
+       <!-- 
         <rosparam file="$(find lidar_bot)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
         <rosparam file="$(find lidar_bot)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
         <rosparam file="$(find lidar_bot)/param/local_costmap_params.yaml" command="load" />
         <rosparam file="$(find lidar_bot)/param/global_costmap_params.yaml" command="load" />
         <rosparam file="$(find lidar_bot)/param/move_base_params.yaml" command="load" />
-        <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />-->
+        <rosparam file="$(find lidar_bot)/param/teb_local_planner_params.yaml" command="load" />
+        -->
     </node>
 </launch>
