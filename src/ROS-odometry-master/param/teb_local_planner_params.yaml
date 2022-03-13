@@ -14,11 +14,11 @@ TebLocalPlannerROS:
     
  # Robot
          
- max_vel_x: 0.3
- max_vel_x_backwards: 0.2
+ max_vel_x: 0.4
+ max_vel_x_backwards: 0.3
  max_vel_theta: 0.2
- acc_lim_x: 0.1
- acc_lim_theta: 0.1
+ acc_lim_x: 0.3
+ acc_lim_theta: 0.3
  min_turning_radius: 1.75
  footprint_model: # types: "point", "circular", "two_circles", "line", "polygon"
    type: "polygon"
@@ -79,5 +79,3 @@ TebLocalPlannerROS:
  obstacle_keypoint_offset: 0.1
  obstacle_heading_threshold: 0.45
  visualize_hc_graph: False
-
- oscillation_recovery: False
