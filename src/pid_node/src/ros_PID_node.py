@@ -10,7 +10,7 @@ from time import sleep
 
 Kp = 80
 Ki = 60
-Kd = 0.01
+Kd = 0.0
 
 pid = PID(Kp, Ki, Kd)
 pid.sample_time = 0.05
