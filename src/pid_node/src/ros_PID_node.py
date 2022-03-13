@@ -8,8 +8,8 @@ from simple_pid import PID
 
 from time import sleep
 
-Kp = 70
-Ki = 50
+Kp = 80
+Ki = 60
 Kd = 0.0
 
 pid = PID(Kp, Ki, Kd)
@@ -64,7 +64,7 @@ def callback1(data):
     if (target_speed == 0):
         throttle_target = 1455
     else:
-        pid_output = pid(speed) + (target_speed * abs(Kf))
+        pid_output = pid(speed) + (target_speed * 0)
         throttle_target = pid_output+1455
 
     if throttle_target >= 2500 :
