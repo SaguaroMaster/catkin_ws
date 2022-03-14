@@ -7,8 +7,8 @@ from std_msgs.msg import Float64
 #from std_msgs.msg import Float64MultiArray
 from simple_pid import PID
 
-Kp = 100
-Ki = 80
+Kp = 120
+Ki = 100
 Kd = 0.0
 
 pid = PID(Kp, Ki, Kd)
