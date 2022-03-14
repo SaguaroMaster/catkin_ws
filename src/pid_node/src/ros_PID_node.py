@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
-from termios import VREPRINT
+#from termios import VREPRINT
 import rospy
 from std_msgs.msg import Int32
 from std_msgs.msg import Float64
-from std_msgs.msg import Float64MultiArray
+#from std_msgs.msg import Float64MultiArray
 from simple_pid import PID
 
 Kp = 100
