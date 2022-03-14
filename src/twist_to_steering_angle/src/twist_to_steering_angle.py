@@ -19,7 +19,8 @@ def sender(steer_value, target_speed):
 def callback1(data):
 
     target_speed = data.linear.x
-    angular_speed = data.angular.z
+    #angular_speed = data.angular.z
+    steer_rad = data.angular.z
 
     wheelbase = 0.28
     #steer_us = 1455
@@ -30,8 +31,9 @@ def callback1(data):
         steer_us = steer_deg * 16.12 + 1455
     else:
         steer_us = 1455'''
-    steer_deg=angular_speed*57.3
-    steer_us = steer_deg * 16.12 + 1455
+    
+    #steer_deg=angular_speed*57.3
+    steer_us = steer_rad * 923,68 + 1455
 
     sender(steer_us, target_speed)
 

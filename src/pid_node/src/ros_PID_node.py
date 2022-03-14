@@ -25,7 +25,6 @@ def sender(throttle_value):
     pub2.publish(throttle_value)
     rate.sleep()
 
-
 def callback4(data):
     global target_speed
     target_speed = data.data
@@ -44,7 +43,7 @@ def callback_vl(data):
         Kf = 300
         if (pid.auto_mode != True):
             pid.auto_mode = True
-        pid_output = pid(speed) + (target_speed * abs(Kf))
+        pid_output = pid(speed) + target_speed * Kf
         throttle_target = pid_output+1455
     else: 
         Kf = 0
