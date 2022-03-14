@@ -78,4 +78,4 @@ TebLocalPlannerROS:
 
 #Recovery
 
-#oscillation_recovery: False
+oscillation_recovery: False
