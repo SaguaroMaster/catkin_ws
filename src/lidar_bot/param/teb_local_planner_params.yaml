@@ -35,7 +35,7 @@ TebLocalPlannerROS:
  # Obstacles
     
  min_obstacle_dist: 0.3
- inflation_dist: 0.2 
+ inflation_dist: 0.3
  include_costmap_obstacles: True
  costmap_obstacles_behind_robot_dist: 0.2
  obstacle_poses_affected: 30
@@ -49,7 +49,7 @@ TebLocalPlannerROS:
  no_outer_iterations: 4
  optimization_activate: True
  optimization_verbose: False
- penalty_epsilon: 0.1
+ penalty_epsilon: 0.09
  weight_max_vel_x: 20
  weight_max_vel_theta: 10
  weight_acc_lim_x: 10
