@@ -36,9 +36,8 @@ def callback_vr(data):
 
 def callback_vl(data):
     Vl = data.data
-
-    avg_rpm_rear = (Vl+Vr)/2
-    speed = (avg_rpm_rear/60)*0.355; 
+    
+    speed = (Vl+Vr)/2
 
     pid.setpoint = target_speed
 
