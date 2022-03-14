@@ -45,7 +45,6 @@ void speed_L_Callback(const std_msgs::Float64& Vlx)
 void speed_R_Callback(const std_msgs::Float64& Vrx)
 {
   Vr = Vrx.data;
-  cout<<Vr;
 }
 
 void ackermanDriveCalculus(const std_msgs::Int32& steer1){//callback function. ConstPtr is a pointer to the data structure we receive

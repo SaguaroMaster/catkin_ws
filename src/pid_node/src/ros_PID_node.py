@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from termios import VREPRINT
 import rospy
 from std_msgs.msg import Int32
 from std_msgs.msg import Float64
@@ -14,7 +15,6 @@ pid = PID(Kp, Ki, Kd)
 pid.sample_time = 0.05
 target_speed = 0
 throttle_target = 1455
-rpm_array1 = [0, 0, 0, 0]
 
 
 rospy.init_node('pid_node')
@@ -30,12 +30,14 @@ def callback4(data):
     global target_speed
     target_speed = data.data
 
-    
-def callback1(data):
-    global rpm_array1
-    rpm_array1 = data.data
+def callback_vr(data):
+    global Vr
+    Vr = data.data
 
-    avg_rpm_rear = (rpm_array1[2]+rpm_array1[3])/2
+def callback_vl(data):
+    Vl = data.data
+
+    avg_rpm_rear = (Vl+Vr)/2
     speed = (avg_rpm_rear/60)*0.355; 
 
     pid.setpoint = target_speed
@@ -59,9 +61,8 @@ def callback1(data):
     sender(throttle_target)
 
 
-
 rospy.Subscriber("target_speed", Float64, callback4)
-rospy.Subscriber("rpm", Float64MultiArray, callback1)
-
+rospy.Subscriber("speed_R", Float64, callback_vr)
+rospy.Subscriber("speed_L", Float64, callback_vl)
 
 rospy.spin()
