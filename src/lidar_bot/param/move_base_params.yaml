@@ -5,7 +5,7 @@ controller_patience: 30.0
 conservative_reset_dist: 2.0
 planner_frequency: 5.0
 oscillation_timeout: 30.0
-oscillation_distance: 1.0
+oscillation_distance: 0.1
 
 recovery_behavior_enabled: False
 clearing_rotation_allowed: False
