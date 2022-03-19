@@ -1,7 +1,6 @@
 <launch>
 
     <node pkg="rosserial_python" type="serial_node.py" args="/dev/ttyACM0" name="serial_node" respawn="true"/>
-    <node pkg="pid_node" type="ros_PID_node.py" name="pid_node" respawn="true"/>
     <node pkg="robotics_project" type="odometry_node" name="odometry_node" respawn="true"/>
 
     <include file="$(find rplidar_ros)/launch/rplidar.launch" />
