@@ -72,8 +72,6 @@ void ackermanDriveCalculus(const std_msgs::Int32& steer1){//callback function. C
     }
     
 
-    
-
     ROS_INFO("V: [%f], w: [%f]", rearVelocity,angularVelocity);
 
     gettimeofday(&time_now, nullptr);
