@@ -58,21 +58,11 @@ void ackermanDriveCalculus(const std_msgs::Int32& steer1){//callback function. C
     double Vy; 
 
     //computing velocity
-    if(odom_type=="ackerman"){
-      double normalizedSteeringAngle=steer/STEERING_FACTOR;   
-      angularVelocity=rearVelocity*(tan(normalizedSteeringAngle*PI/180));
-      angularVelocity=angularVelocity/REAR_FRONT_DISTANCE;
-      Vx=rearVelocity;
-      Vy=0.0;
-    } else if(odom_type=="differential")
-    {
-      angularVelocity = (Vr - Vl)/WHEEL_BASELINE;
-      Vx=rearVelocity*cos(theta);
-      Vy=rearVelocity*sin(theta);
-    }
-    
-
-    ROS_INFO("V: [%f], w: [%f]", rearVelocity,angularVelocity);
+    double normalizedSteeringAngle=steer/STEERING_FACTOR;   
+    angularVelocity=rearVelocity*(tan(normalizedSteeringAngle*PI/180));
+    angularVelocity=angularVelocity/REAR_FRONT_DISTANCE;
+    Vx=rearVelocity;
+    Vy=0.0;
 
     gettimeofday(&time_now, nullptr);
     time_t msecs_time = (time_now.tv_sec * 1000) + (time_now.tv_usec / 1000);
@@ -80,9 +70,7 @@ void ackermanDriveCalculus(const std_msgs::Int32& steer1){//callback function. C
 
     //computing dt
     double timeSpan;
-
     timeSpan = secs_time - lastStamp;
-
     lastStamp = secs_time;
 
     //runge-kutta integration
@@ -129,7 +117,7 @@ void ackermanDriveCalculus(const std_msgs::Int32& steer1){//callback function. C
 
     static tf::TransformBroadcaster br;
     tf::Transform transform;//ros structure for tf
-    transform.setOrigin( tf::Vector3(x, y, 0) );//set the origin in a 3d space (Vector3). As the turtle works in a 2d field, the 3rd value is set to 0
+    transform.setOrigin( tf::Vector3(x, y, 0) );//set the origin in a 3d space (Vector3).
     tf::Quaternion q;
     q.setRPY(0, 0, theta);//2d spaces => 1 value of the quaternion
     transform.setRotation(q);
@@ -139,19 +127,9 @@ void ackermanDriveCalculus(const std_msgs::Int32& steer1){//callback function. C
 
 
 void dynamicRecCallback(robotics_project::ParametersConfig &config, uint32_t level) {
-    if(config.mode==0){
-      odom_type="ackerman";
-      ROS_INFO("Changed mode to: Ackerman ");
-    }
-    else {
-      odom_type="differential";
-      ROS_INFO("Changed mode to: Differential ");
-    }
     x=config.x;
     y=config.y;
     ROS_INFO("Setting (x,y) to: (%f,%f)",x,y);
-    
-
 }
 
 
@@ -162,7 +140,6 @@ int main(int argc, char **argv){
 	ros::NodeHandle n;
     odom_pub=n.advertise<robotics_project::customOdom>("custom_odom",60);
     odomTest=n.advertise<nav_msgs::Odometry>("odom",60);
-    ROS_INFO("I'm alive");
 
     ros::Subscriber sub1 = n.subscribe("speed_L", 100, speed_L_Callback);
     ros::Subscriber sub2 = n.subscribe("speed_R", 100, speed_R_Callback);
@@ -175,6 +152,5 @@ int main(int argc, char **argv){
 
   	ros::spin();
 
-
-    return 0;
+  return 0;
 }
