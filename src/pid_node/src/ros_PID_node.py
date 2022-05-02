@@ -1,10 +1,8 @@
 #!/usr/bin/env python
 
-#from termios import VREPRINT
 import rospy
 from std_msgs.msg import Int32
 from std_msgs.msg import Float64
-#from std_msgs.msg import Float64MultiArray
 from simple_pid import PID
 
 Kp = 120
@@ -13,9 +11,9 @@ Kd = 0.0
 
 pid = PID(Kp, Ki, Kd)
 pid.sample_time = 0.05
+
 target_speed = 0
 throttle_target = 1455
-
 
 rospy.init_node('pid_node')
 
@@ -44,7 +42,7 @@ def callback_vl(data):
         if (pid.auto_mode != True):
             pid.auto_mode = True
         pid_output = pid(speed) + target_speed * Kf
-        throttle_target = pid_output+1455
+        throttle_target = pid_output + 1455
     else: 
         Kf = 0
         pid.auto_mode = False
